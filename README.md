@@ -1,15 +1,20 @@
 # Fast and Robust Registration of Partially Overlapping Point Clouds
 
-[Preprint]() | [Dataset](https://github.com/eduardohenriquearnold/CODD) 
+[Paper](https://ieeexplore.ieee.org/document/9662220) | [Preprint](https://arxiv.org/abs/2112.09922) | [Dataset](https://github.com/eduardohenriquearnold/CODD) 
 
 ![demo](assets/demo.gif)
 
 If you use any parts of this code or dataset, please cite
 ```
-@article{arnold_fast_reg,
-	title={{Fast and Robust Registration of Partially Overlapping Point Clouds}},
-	author={Arnold, Eduardo and Mozaffari, Sajjad and Dianati, Mehrdad},
-	year={2021}
+@article{arnold2021fastreg,
+  author={Arnold, Eduardo and Mozaffari, Sajjad and Dianati, Mehrdad},
+  journal={IEEE Robotics and Automation Letters},
+  title={Fast and Robust Registration of Partially Overlapping Point Clouds},
+  year={2021},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/LRA.2021.3137888}
 }
 ```
 
