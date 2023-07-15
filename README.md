@@ -1,6 +1,6 @@
 # Fast and Robust Registration of Partially Overlapping Point Clouds
 
-[Paper](https://ieeexplore.ieee.org/document/9662220) | [Preprint](https://arxiv.org/abs/2112.09922) | [Dataset](https://github.com/eduardohenriquearnold/CODD) 
+<h3 align="center"><a href="https://ieeexplore.ieee.org/document/9662220">Paper</a> | <a href="https://arxiv.org/abs/2112.09922">Preprint</a> | <a href="https://github.com/eduardohenriquearnold/CODD">Dataset</a></h3>
 
 ![demo](assets/demo.gif)
 
@@ -19,10 +19,30 @@ If you use any parts of this code or dataset, please cite
 ```
 
 ## :gear: Installation
+This repository requires a CUDA capable device. We provide a ready-to-use docker image (recommended). 
+Alternatively, one can also install the dependencies with a conda environment and compile the required CUDA kernels (see instructions below).
+
+### :whale2: Docker Image
+Pull the image using
+```shell
+docker pull eduardoharnold/fastreg:latest
+```
+
+Then use it as
+```shell
+docker run -it --rm --gpus 0 -v path_to_codd:/data/CODD -v path_to_kitti:/data/KITTIodometry eduardoharnold/fastreg:latest
+
+#inside container
+python train.py codd
+```
+
+Optional: to build the image locally (e.g. after code changes)
+```shell
+docker build -t eduardoharnold/fastreg:latest .
+```
 
 ### Dependencies
-This repository requires a CUDA capable device.
-Please install the dependencies using conda and activate the environment:
+If not using the Docker image, please install the dependencies using conda and activate the environment:
 ```
 conda env create -f environment.yml
 conda activate fastreg
